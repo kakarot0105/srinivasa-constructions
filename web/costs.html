@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Construction Cost Estimates | Srinivasa Constructions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <h1 class="brand">Srinivasa Constructions</h1>
+          <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="costs.html" class="active">Costs</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="section">
+      <div class="container">
+        <h2>Cost Estimates</h2>
+        <p>
+          Understanding construction costs upfront helps clients plan their
+          projects effectively.  The table below lists typical cost ranges per
+          square foot for major components of a building.  These are indicative
+          values only – final estimates will vary based on project scope,
+          materials and location.  We recommend using a simple calculator to
+          approximate total costs for a given floor area.
+        </p>
+
+        <div class="cost-calculator">
+          <table class="cost-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Cost per sq ft (USD)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Foundation &amp; Footings</td>
+                <td class="cost" data-value="50">50</td>
+              </tr>
+              <tr>
+                <td>Framing &amp; Structure</td>
+                <td class="cost" data-value="40">40</td>
+              </tr>
+              <tr>
+                <td>Roofing</td>
+                <td class="cost" data-value="30">30</td>
+              </tr>
+              <tr>
+                <td>Electrical &amp; Plumbing</td>
+                <td class="cost" data-value="25">25</td>
+              </tr>
+              <tr>
+                <td>Finishes (flooring, paint, etc.)</td>
+                <td class="cost" data-value="20">20</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="calculator-form">
+            <label for="area">Enter total floor area (sq ft):</label>
+            <input
+              type="number"
+              id="area"
+              name="area"
+              min="0"
+              placeholder="e.g. 1500"
+            />
+            <button id="calculate-btn" class="btn" type="button">Calculate</button>
+          </div>
+          <div id="estimate-result" class="estimate-result"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>
+          &copy; 2025 Srinivasa Constructions &amp; Civil Works. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="costs.js"></script>
+  </body>
+</html>
