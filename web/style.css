@@ -1,15 +1,72 @@
 /* Basic styles for the Srinivasa Constructions website */
 
+/* Import retro‑style Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto+Slab:wght@400&display=swap');
+/* Add a cursive retro script for taglines */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* Use Roboto Slab for a vintage serif look */
+  font-family: 'Roboto Slab', serif;
   line-height: 1.6;
   color: #333;
-  background-color: #fafafa;
+  /* Soft beige background for retro warmth */
+  background-color: #f8f1e5;
+}
+
+/* Use Playfair Display for headings to evoke a classic feel */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Use the Pacifico font for hero taglines and key headings to add a retro flair */
+.hero h2 {
+  font-family: 'Pacifico', cursive;
+  letter-spacing: 1px;
+  /* Increase the font size for dramatic retro style */
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  /* Slightly bold weight to make the headline stand out */
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Hero paragraph styling */
+.hero p {
+  max-width: 600px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.1rem;
+  color: #f5f5f5;
+}
+
+/* Apply a subtle diagonal stripe pattern to the hero background for a retro vibe */
+.hero {
+  /* Layer a warm orange overlay and a diagonal stripe pattern on top of a retro construction photo */
+  background: 
+    linear-gradient(rgba(211, 84, 0, 0.6), rgba(211, 84, 0, 0.6)),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1) 0,
+      rgba(255, 255, 255, 0.1) 15px,
+      transparent 15px,
+      transparent 30px
+    ),
+    url('https://source.unsplash.com/1600x900/?vintage-construction,city') no-repeat center center/cover;
+  /* Set spacing and alignment for the hero */
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
 }
 
 header {
-  background: #00334e; /* deep teal tone for retro palette */
+  /* Use a rich dark brown for the header to give a vintage feel */
+  background: #4b3a2d;
   color: #fff;
 }
 
@@ -88,28 +145,7 @@ header {
   color: #00aaff;
 }
 
-.hero {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
-    ),
-    url('images/retro-hero.png') no-repeat center center/cover;
-  padding: 5rem 0;
-  text-align: center;
-  position: relative;
-}
-
-.hero h2 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-}
-
-.hero p {
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
-  font-size: 1.1rem;
-}
+/* Remove duplicate hero styles below; unify settings above */
 
 .btn {
   background: #d35400; /* retro orange */
@@ -139,11 +175,14 @@ header {
 }
 
 .service,
-.project-item {
-  background: #f7f7f7;
+  .project-item {
+  /* Light cream backgrounds with subtle border for retro cards */
+  background: #fffaf3;
+  border: 1px solid #eed9c0;
   padding: 1rem;
   border-radius: 4px;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .project-item img {
@@ -223,8 +262,9 @@ header {
 /* Retro pattern overlay class for selected sections */
 .retro-pattern {
   /* Blend a warm overlay with the geometric construction pattern */
+  /* Replace local pattern with a remote retro pattern from Unsplash */
   background: linear-gradient(rgba(255, 246, 229, 0.9), rgba(255, 246, 229, 0.9)),
-    url('images/retro-pattern.png') center center/cover no-repeat;
+    url('https://source.unsplash.com/800x600/?pattern,retro') center center/cover no-repeat;
 }
 
 .form-group {
